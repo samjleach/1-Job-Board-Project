@@ -1,0 +1,41 @@
+.navbar {
+  margin: 15px 15px 0px 15px;
+  display: flex;
+  flex-direction: row;
+  height: 11vh;
+  width: auto;
+}
+
+.logo {
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-right {
+  margin-left: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  font-size: large;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+}
+
+li {
+  list-style-type: none;
+}
