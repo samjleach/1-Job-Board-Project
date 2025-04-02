@@ -1,12 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { NavigationButtonProps } from "../types/types";
 
-interface ButtonProps {
-  to: string;
-  btnMessage: string;
-}
-
-function NavigationButton({ to, btnMessage }: ButtonProps) {
+function NavigationButton({ to, btnMessage }: NavigationButtonProps) {
   const nav = useNavigate();
 
   const handleNav = () => {

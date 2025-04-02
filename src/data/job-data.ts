@@ -1,13 +1,4 @@
-export interface JobListingAttributes {
-  id: number;
-  title: string;
-  company: string;
-  location: string;
-  type: string;
-  description: string;
-  requirements: string[];
-  applyLink: string;
-}
+import { JobListingAttributes } from "../types/types";
 
 export const jobs: JobListingAttributes[] = [
   {
