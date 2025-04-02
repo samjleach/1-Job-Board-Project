@@ -1,3 +1,27 @@
 .title {
   margin-top: 0;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jobCard {
+  background-color: rgb(235, 235, 235);
+  padding: 16px;
+  width: 60%;
+  margin: 5px;
+  border-radius: 7px;
+}
+
+h3 {
+  font-size: 32px;
+  margin: 5px 5px 16px 5px;
+}
+
+h4 {
+  font-weight: 500;
+  margin: 0;
+}

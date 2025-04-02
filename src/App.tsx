@@ -4,6 +4,7 @@ import Homepage from "./pages/homepage";
 import About from "./pages/about";
 import Navbar from "./components/navBar";
 import "./styles/App.css";
+import JobDetailsPage from "./pages/jobDetailsPage";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
         <Route
           path="/about"
           element={<About />}
+        />
+        <Route
+          path="/job-details/:id"
+          element={<JobDetailsPage />}
         />
       </Routes>
     </div>

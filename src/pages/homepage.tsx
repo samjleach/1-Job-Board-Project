@@ -1,22 +1,24 @@
 import React from "react";
-import NavigationButton from "../components/navButton";
 import "../styles/homepage.css";
 import { jobs } from "../data/job-data";
-import JobListing from "../components/jobListing";
 import { Link } from "react-router-dom";
+import InfoBox from "../components/homepageInfoBoxes";
 
 function Homepage() {
   return (
-    <div>
+    <div className="home">
       {jobs.map((job) => {
         return (
-          <>
-            <JobListing
-              key={job.id}
-              job={job}
+          <div className="jobCard">
+            <h3>{job.title}</h3>
+            <InfoBox
+              company={job.company}
+              location={job.location}
+              empType={job.type}
             />
-            <Link to={"about"}>Show more</Link>
-          </>
+            <p>{job.description}</p>
+            <Link to={`/job-details/${job.id}`}>Show more</Link>
+          </div>
         );
       })}
     </div>

@@ -1,12 +1,8 @@
 import React from "react";
 import JobRequirements from "./jobRequirements";
-import { JobListingAttributes } from "../data/job-data";
+import { SingleJobListingProp } from "../types/types";
 
-interface SingleJobListing {
-  job: JobListingAttributes;
-}
-
-function JobListing({ job }: SingleJobListing) {
+function JobListing({ job }: SingleJobListingProp) {
   return (
     <div>
       <h2>{job.title}</h2>

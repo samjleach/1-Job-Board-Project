@@ -1,0 +1,16 @@
+.infoArea {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.infoBox {
+  background-color: gainsboro;
+  padding: 7px 12px;
+  border-radius: 7px;
+}
+
+.title {
+  font-size: large;
+  font-weight: 700;
+}

@@ -13,3 +13,13 @@ export interface NavigationButtonProps {
   to: string;
   btnMessage: string;
 }
+
+export interface SingleJobListingProp {
+  job: JobListingAttributes;
+}
+
+export interface InfoBoxProps {
+  company: string;
+  location: string;
+  empType: string;
+}
