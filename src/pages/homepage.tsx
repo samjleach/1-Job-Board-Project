@@ -3,11 +3,15 @@ import "../styles/homepage.css";
 import { jobs } from "../data/job-data";
 import { Link } from "react-router-dom";
 import InfoBox from "../components/homepageInfoBoxes";
+import usePagination from "../hooks/usePagination";
 
 function Homepage() {
+  const paginator = usePagination(jobs);
+  const jobListings = paginator.pageItems;
+
   return (
     <div className="home">
-      {jobs.map((job) => {
+      {jobListings.map((job) => {
         return (
           <div className="jobCard">
             <h3>{job.title}</h3>
@@ -21,6 +25,21 @@ function Homepage() {
           </div>
         );
       })}
+      <div className="pages">
+        <button
+          className="button"
+          onClick={paginator.decrementPage}
+        >
+          Previous page
+        </button>
+        <p>{paginator.currentPage}</p>
+        <button
+          className="button"
+          onClick={paginator.incrementPage}
+        >
+          Next page
+        </button>
+      </div>
     </div>
   );
 }

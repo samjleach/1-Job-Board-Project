@@ -14,3 +14,19 @@
   font-size: large;
   font-weight: 700;
 }
+
+.pages {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  height: fit-content;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.button:active {
+  background-color: #bbc4b4;
+}
