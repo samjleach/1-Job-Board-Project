@@ -1,8 +1,9 @@
 .navbar {
-  margin: 15px 15px 0px 15px;
+  margin: 25px 15px 45px 15px;
   display: flex;
   flex-direction: row;
-  height: 11vh;
+
+  align-items: center;
   width: auto;
 }
 
@@ -15,6 +16,10 @@
 }
 
 .navbar-right {
+  margin-left: auto;
+}
+
+.navbar-center {
   margin-left: auto;
 }
 
@@ -38,4 +43,11 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+.searchBar {
+  font-size: larger;
+  padding: 8px;
+  border-radius: 10px;
+  width: 25vw;
 }
