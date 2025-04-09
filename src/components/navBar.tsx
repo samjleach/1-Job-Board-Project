@@ -25,12 +25,17 @@ function Navbar() {
     }
   }
 
+  const refresh = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="navbar">
       <div className="navbar-left">
         <NavLink
-          to="/"
+          to={"/"}
           className={"logo"}
+          onClick={refresh}
         >
           Job Seeker
         </NavLink>

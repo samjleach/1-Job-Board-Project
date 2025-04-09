@@ -22,12 +22,17 @@ function usePagination(items: JobListingAttributes[], itemsPerPage = 5) {
     }
   };
 
+  const backToStart = () => {
+    setPage(1);
+  };
+
   return {
     currentPage,
     numberOfPages,
     pageItems,
     incrementPage,
     decrementPage,
+    backToStart,
   };
 }
 
