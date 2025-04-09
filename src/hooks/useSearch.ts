@@ -19,7 +19,7 @@ function useSearch() {
   const resetSearchBar = () => {
     setSearchInput("");
   };
-  console.log(matches);
+
   return { searchInput, handleChange, matches, resetSearchBar };
 }
 

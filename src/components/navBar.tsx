@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, Navigate, NavLink } from "react-router-dom";
 import useSearch from "../hooks/useSearch";
 
 function Navbar() {
@@ -26,7 +26,12 @@ function Navbar() {
   }
 
   const refresh = () => {
-    window.location.reload();
+    // This is a really janky way of setting the pages back to the first
+    // by clicking the "logo", I'm sure theres a better way - this works for now
+
+    if (window.location.pathname === "/") {
+      window.location.reload();
+    }
   };
 
   return (

@@ -13,7 +13,10 @@ function Homepage() {
     <div className="home">
       {jobListings.map((job) => {
         return (
-          <div className="jobCard">
+          <div
+            className="jobCard"
+            key={job.id}
+          >
             <h3>{job.title}</h3>
             <InfoBox
               company={job.company}
