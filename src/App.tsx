@@ -5,6 +5,7 @@ import About from "./pages/about";
 import Navbar from "./components/navBar";
 import "./styles/App.css";
 import JobDetailsPage from "./pages/jobDetailsPage";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           element={<JobDetailsPage />}
         />
       </Routes>
+      <Analytics />
     </div>
   );
 }
