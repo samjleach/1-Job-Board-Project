@@ -1,10 +1,30 @@
 import React from "react";
 import "../styles/navbar.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useSearch from "../hooks/useSearch";
 
 function Navbar() {
-  const { searchInput, handleChange, matches } = useSearch();
+  const { searchInput, handleChange, matches, resetSearchBar } = useSearch();
+
+  if (searchInput) {
+    const searchResults = document.getElementById("searchResults");
+    if (searchResults) {
+      searchResults.style.visibility = "inherit";
+    }
+  } else {
+    const searchResults = document.getElementById("searchResults");
+    if (searchResults) {
+      searchResults.style.visibility = "hidden";
+    }
+  }
+
+  function onSearchOptionClick() {
+    const searchbar = document.getElementById("search");
+    if (searchbar) {
+      resetSearchBar();
+    }
+  }
+
   return (
     <div className="navbar">
       <div className="navbar-left">
@@ -17,16 +37,33 @@ function Navbar() {
       </div>
       <div className="navbar-center">
         <input
+          id="search"
           placeholder="Search here"
           className="searchBar"
           type="text"
           onChange={handleChange}
           value={searchInput}
         />
-        <p>{searchInput}</p>
-        {matches.map((j) => {
-          return <p>{j.title}</p>;
-        })}
+        <div id="searchResults">
+          {matches.map((j) => {
+            return (
+              <>
+                <Link
+                  className="remove"
+                  to={`/job-details/${j.id}`}
+                  onClick={onSearchOptionClick}
+                >
+                  <div className="option searchLink">
+                    <p>
+                      {j.title} | {j.location} | {j.company}
+                    </p>
+                  </div>
+                </Link>
+                <hr />
+              </>
+            );
+          })}
+        </div>
       </div>
       <div className="navbar-right">
         <ul>

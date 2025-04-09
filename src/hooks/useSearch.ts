@@ -15,8 +15,12 @@ function useSearch() {
       j.title.toLowerCase().includes(searchInput.toLowerCase())
     );
   }
+
+  const resetSearchBar = () => {
+    setSearchInput("");
+  };
   console.log(matches);
-  return { searchInput, handleChange, matches };
+  return { searchInput, handleChange, matches, resetSearchBar };
 }
 
 export default useSearch;
